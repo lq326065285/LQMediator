@@ -6,7 +6,7 @@
 //  Copyright © 2017年 李强. All rights reserved.
 //
 
-#import "LQModiator.h"
+#import "LQMediator.h"
 
 @interface LQMediator ()
 
@@ -17,10 +17,10 @@
 @implementation LQMediator
 
 +(instancetype)shareInstance{
-    static CTModiator * modiator = nil;
+    static LQMediator * modiator = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        modiator = [[CTModiator alloc] init];
+        modiator = [[LQMediator alloc] init];
     });
     return modiator;
 }
